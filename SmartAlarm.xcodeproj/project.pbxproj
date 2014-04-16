@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		378EC56D18FEE4A3005D8389 /* alarm.wav in Resources */ = {isa = PBXBuildFile; fileRef = 378EC56C18FEE4A3005D8389 /* alarm.wav */; };
 		37DAF6F118FB481C008384AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DAF6F018FB481C008384AE /* Foundation.framework */; };
 		37DAF6F318FB481C008384AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DAF6F218FB481C008384AE /* CoreGraphics.framework */; };
 		37DAF6F518FB481C008384AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37DAF6F418FB481C008384AE /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		378EC56C18FEE4A3005D8389 /* alarm.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = alarm.wav; sourceTree = "<group>"; };
 		37DAF6ED18FB481C008384AE /* SmartAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DAF6F018FB481C008384AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		37DAF6F218FB481C008384AE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -117,6 +119,7 @@
 				37DAF70218FB481C008384AE /* Main.storyboard */,
 				37DAF70518FB481C008384AE /* SAViewController.h */,
 				37DAF70618FB481C008384AE /* SAViewController.m */,
+				378EC56C18FEE4A3005D8389 /* alarm.wav */,
 				37DAF70818FB481C008384AE /* Images.xcassets */,
 				37DAF6F718FB481C008384AE /* Supporting Files */,
 			);
@@ -231,6 +234,7 @@
 			files = (
 				37DAF70918FB481C008384AE /* Images.xcassets in Resources */,
 				37DAF6FB18FB481C008384AE /* InfoPlist.strings in Resources */,
+				378EC56D18FEE4A3005D8389 /* alarm.wav in Resources */,
 				37DAF70418FB481C008384AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +461,7 @@
 				37DAF72118FB481C008384AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37DAF72218FB481C008384AE /* Build configuration list for PBXNativeTarget "SmartAlarmTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +470,7 @@
 				37DAF72418FB481C008384AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

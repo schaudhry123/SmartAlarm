@@ -39,8 +39,10 @@
     notification.timeZone = [NSTimeZone defaultTimeZone];
     notification.alertBody = @"Time to wake up!";
     notification.alertAction = @"Wake up";
+    notification.soundName = @"alarm.wav";
     
     NSLog(@"The alarm is set for %@", alarmTime);
+    
     [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 
@@ -56,7 +58,7 @@
     
     localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
     
-    localNotification.alertBody = @"Button Pressed please work!";
+    localNotification.alertBody = @"Button Pressed!";
 
     localNotification.timeZone = [NSTimeZone defaultTimeZone];
     
