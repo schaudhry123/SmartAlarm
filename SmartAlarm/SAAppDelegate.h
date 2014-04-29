@@ -11,5 +11,6 @@
 @interface SAAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIViewController *rootController;
 
 @end
