@@ -10,8 +10,6 @@
 
 @interface SAViewController ()
 
-- (IBAction)buttonPressed:(id)sender;
-
 @end
 
 @implementation SAViewController
@@ -70,6 +68,19 @@
     }
 }
 
+- (IBAction)answerPressed:(UIButton *)sender
+{
+    NSString *answer = [NSString stringWithFormat:@"%i",number1 + number2];
+    
+    if ([sender.titleLabel.text isEqualToString:answer]) {
+        [[UIApplication sharedApplication] cancelAllLocalNotifications];
+        NSLog(@"Right answer selected");
+        self.navigationController.navigationBarHidden = NO;
+        [super viewDidLoad];
+    }
+    NSLog(@"The button title is %@", sender.titleLabel.text);
+}
+
 - (IBAction)setAlarm:(id)sender
 {
     NSDate *alarmTime = datePicker.date;
@@ -92,66 +103,10 @@
     
 }
 
-- (IBAction)generateQuestion
-{
-    number1 = (arc4random()%100+1); //Generates random number from 1 to 100
-    number2 = (arc4random()%100+1);
-    NSString *string = [NSString stringWithFormat:@"%i + %i", number1, number2];
-    question.text = string;
-}
-
-- (IBAction)generateAnswers
-{
-    NSString *answer = [NSString stringWithFormat:@"%i",number1 + number2];
-    
-    NSString *ans1 = [NSString stringWithFormat:@"%i", (arc4random()%100+1)];
-    [answer1 setTitle:ans1 forState:UIControlStateNormal];
-    
-    NSString *ans2 = [NSString stringWithFormat:@"%i", (arc4random()%100+1)];
-    [answer2 setTitle:ans2 forState:UIControlStateNormal];
-    
-    NSString *ans3 = [NSString stringWithFormat:@"%i", (arc4random()%100+1)];
-    [answer3 setTitle:ans3 forState:UIControlStateNormal];
-    
-    NSString *ans4 = [NSString stringWithFormat:@"%i", (arc4random()%100+1)];
-    [answer4 setTitle:ans4 forState:UIControlStateNormal];
-    
-    int ansNum = (arc4random()%4+1);
-    
-    if (ansNum == 1) {
-        [answer1 setTitle:answer forState:UIControlStateNormal];
-    }
-    else if (ansNum == 2) {
-        [answer2 setTitle:answer forState:UIControlStateNormal];
-    }
-    else if (ansNum == 3) {
-        [answer3 setTitle:answer forState:UIControlStateNormal];
-    }
-    else {
-        [answer4 setTitle:answer forState:UIControlStateNormal];
-    }
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonPressed:(id)sender {
-    
-    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
-    
-    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:10];
-    
-    localNotification.alertBody = @"Button Pressed!";
-
-    localNotification.timeZone = [NSTimeZone defaultTimeZone];
-    
-    localNotification.soundName = UILocalNotificationDefaultSoundName;
-    
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
-    
-    NSLog(@"Done with this ");
-}
 @end

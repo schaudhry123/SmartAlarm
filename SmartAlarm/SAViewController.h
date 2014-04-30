@@ -14,11 +14,6 @@
     IBOutlet UIButton *startButton;
     int number1;
     int number2;
-//    IBOutlet UILabel *question;
-//    IBOutlet UIButton *answer1;
-//    IBOutlet UIButton *answer2;
-//    IBOutlet UIButton *answer3;
-//    IBOutlet UIButton *answer4;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *question;
@@ -29,7 +24,6 @@
 
 
 - (IBAction)setAlarm:(id)sender;
-- (IBAction)generateQuestion;
-- (IBAction)generateAnswers;
+- (IBAction)answerPressed:(UIButton *)sender;
 
 @end
